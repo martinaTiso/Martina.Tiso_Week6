@@ -1,0 +1,50 @@
+1.
+
+la connession pool funziona che ogni volta che un utente chiama OPEN() su una connessione, il 
+pooler cerca una connessione disponibile nel pool e se è disponibile una connessione in pool, la restituisce al chiamante 
+invece di aprire una nuova connessione.
+Quando l'applicazione chiama CLOSE() sulla connessione, il pooler la 
+restituisce al set di connessioni attive in pool anziché chiuderlo; Una volta che la connessione viene restituita al pool, è pronta per 
+essere riutilizzata alla successiva chiamata Open.
+
+2.
+
+le prime due
+
+
+3.
+
+Abbiamo due modalità di connessione : Connected Mode e Disconnected Mode
+Il Connected Mode fornisce accesso di sola lettura (e forward-only) ai dati nell'origine e la possibilità di eseguire comandi sull'origine dei dati
+
+Il Disconnected Mode consente di, manipolare i dati recuperati dall'origine dati e successivamente riconciliarli con l'origine dati.
+Le classi disconnesse forniscono un modo comune di lavorare con i dati disconnessi, indipendentemente dall'ambiente di origine data.
+
+4.
+
+Il DataAdapter fornisce il ponte tra l'oggetto DataSet e l'origine dati.
+DataAdapter utilizza oggetti Command per eseguire comandi SQL sull'origine dati per caricare sia DataSet con dati sia per
+riconciliare le modifiche apportate ai dati nel DataSet con l'origine dati.
+La classe DataAdapter permette di collegare l'origine dati e le classi disconnesse tramite le classi connesse.
+
+5.
+
+avro creato una lista di persone..
+
+
+var personEtaMaggiore = persona in person 
+						where persona.eta==18
+						select persona;
+
+
+
+
+
+6. Abbiamo due tipi di concorrenze :
+
+-La concorrenza ottimistica considera la presenza di una violazione nel caso in cui, dopo che un utente riceve un valore dal database, 
+tale valore viene modificato da un altro utente prima che il primo utente abbia effettuato un tentativo di modifica.
+
+-La concorrenza pessimistica implica il blocco di righe nell'origine dati per impedire agli altri utenti di apportare modifiche ai dati che possono influire sugli utenti.
+
+

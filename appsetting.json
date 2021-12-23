@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "GestioneDB": "Server=(localdb)\\mssqllocaldb;Database=GestSpese;Trusted_Connection=True;"
+  }
+}
